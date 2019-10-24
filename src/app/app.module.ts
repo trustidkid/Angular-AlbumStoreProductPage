@@ -12,12 +12,12 @@ import { ProductListComponent } from './product-list/product-list.component';
 
 import { RouterModule, Routes} from '@angular/router';
 
-const appRoute: Routes =[
+const appRoutes: Routes =[
   {path: 'products', component: ProductListComponent},
   {path: 'product/:id', component: ProductPageComponent},
   {path: '', redirectTo: 'produts', pathMatch:'full'},
 
-]
+];
 
 @NgModule({
   declarations: [
@@ -31,7 +31,7 @@ const appRoute: Routes =[
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoute)
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [ProductService],
   bootstrap: [AppComponent]
